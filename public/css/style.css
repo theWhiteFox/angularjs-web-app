@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "MyWebFont";
+    src: url(Existence-Light-webfont.woff2) format("woff2"), url(Existence-Light-webfont.woff) format("woff");
+  }
+  
+  body {
+    font-family: "MyWebFont", Fallback, sans-serif;
+  }
+  
+  .new-class {
+    font-size: 72px;
+  }
+  
+  .other-class {
+    font-size: 32px;
+  }
+  
+  .new-class2 {
+    font-size: 120px;
+  }
+  
+  .reply-text {
+    color: red;
+  }
