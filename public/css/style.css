@@ -1,3 +1,4 @@
+@import "~bootstrap/dist/css/bootstrap.css";
 @font-face {
     font-family: "MyWebFont";
     src: url(Existence-Light-webfont.woff2) format("woff2"), url(Existence-Light-webfont.woff) format("woff");

@@ -6,6 +6,9 @@ node_modules/
 public/lib/angular/*
 !public/lib/angular/angular.min.js
 
+public/lib/angular-resource/*
+!public/lib/angular-resource/angular-resource.min.js
+
 public/lib/angular-route/*
 !public/lib/angular-route/angular-route.min.js
 
