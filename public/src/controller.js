@@ -1,4 +1,4 @@
-app.controller("ListController", function($scope, Contact) {
+app.controller("ListController", function($scope, Contact, $location) {
   $scope.contacts = Contact.query();
   $scope.fields = ["firstName", "lastName"];
 
@@ -9,4 +9,29 @@ app.controller("ListController", function($scope, Contact) {
 
   $scope.sort.field = "firstName";
   $scope.sort.order = false;
+
+  $scope.show = function(id) {
+    $location.url("/contact/" + id);
+  };
+});
+
+app.controller("NewController", function($scope, Contact, $location) {
+  $scope.contact = new Contact({
+    firstName: ["", "text"],
+    lastName: ["", "text"],
+    email: ["", "email"],
+    homePhone: ["", "tel"],
+    birthday: ["", "date"],
+    website: ["", "url"],
+    address: ["", "text"]
+  });
+
+  $scope.save = function() {
+    if ($scope.newContact.$invalid) {
+      $scope.$broadcast("record:invalid");
+    } else {
+      $scope.contact.$save();
+      $location.url("/contacts");
+    }
+  };
 });

@@ -12,6 +12,9 @@ public/lib/angular-resource/*
 public/lib/angular-route/*
 !public/lib/angular-route/angular-route.min.js
 
+public/lib/angular-messages/*
+!public/lib/angular-messages/angular-messages.min.js
+
 public/lib/bootstrap/*
 !public/lib/bootstrap/dist/
 public/lib/bootstrap/dist/*

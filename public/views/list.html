@@ -5,7 +5,7 @@
     <thead>
         <tr>
             <th ng-repeat="field in fields" ng-click="sort(field)">
-                {{field}}
+                {{field | labelCase}}
                 <span ng-show="sort.field === field && !sort.order"><i class="fas fa-angle-down"></i></span>
                 
                 <span ng-show="sort.field === field && sort.order"><i class="fas fa-angle-up"></i></span>
@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="contact in contacts | filter: query | orderBy: sort.field : sort.order">
+        <tr ng-click="show(contact.id)" ng-repeat="contact in contacts | filter: query | orderBy: sort.field : sort.order">
             <td ng-repeat="field in fields">
                 {{contact[field][0]}}
             </td>
